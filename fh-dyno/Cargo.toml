@@ -1,0 +1,21 @@
+[package]
+name = "fh-dyno"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+tokio = { workspace = true }
+
+[dependencies.clap]
+version = "4.6.0"
+default-features = false
+features = ["std", "help", "usage", "suggestions", "derive"]
+
+[dependencies.fh-telemetry]
+version = "0.1.0"
+path = "../fh-telemetry"
+
+[dependencies.plotters]
+version = "0.3.7"
+default-features = false
+features = ["svg_backend", "line_series"]

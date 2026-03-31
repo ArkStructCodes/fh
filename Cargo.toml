@@ -1,0 +1,13 @@
+[workspace]
+resolver = "3"
+members = ["fh-dyno", "fh-telemetry"]
+
+[workspace.dependencies.tokio]
+version = "1.50.0"
+features = ["rt-multi-thread", "net", "sync", "macros"]
+
+[profile.release]
+lto = true
+strip = true
+panic = "abort"
+codegen-units = 1
